@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Aditya Parmar",
+      "username": "aaditya_parmar_",
+      "password": "aditya123",
+      "bio": "this is my bio"
+    },
+    {
+      "id": 1,
+      "name": "Aditya Parmar",
+      "username": "aaditya_parmar_2",
+      "password": "aditya123",
+      "bio": "this is my bio"
+    },
+    {
+      "id": 1,
+      "name": "Aditya Parmar",
+      "username": "aaditya_parmar_3",
+      "password": "aditya123",
+      "bio": "this is my bio"
+    }
+  ]
+}
