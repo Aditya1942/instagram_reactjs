@@ -18,6 +18,10 @@ import MoreIcon from "@material-ui/icons/MoreVert";
 import SearchBar from "../SearchBar/SearchBar";
 import { ButtonBase, useMediaQuery } from "@material-ui/core";
 import "./Header.scss";
+import { useDispatch } from "react-redux";
+import { login, logout } from "../../features/userSlice";
+import { auth } from "../../FirebaseConfig";
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     grow: {
@@ -93,6 +97,7 @@ export default function Header() {
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
   const matches = useMediaQuery("(min-width:600px)");
+  const dispatch = useDispatch();
 
   const handleProfileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -105,6 +110,10 @@ export default function Header() {
   const handleMenuClose = () => {
     setAnchorEl(null);
     handleMobileMenuClose();
+  };
+  const logOut = () => {
+    auth.signOut();
+    dispatch(logout());
   };
 
   const handleMobileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
@@ -123,7 +132,7 @@ export default function Header() {
       onClose={handleMenuClose}
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={logOut}>Log out</MenuItem>
     </Menu>
   );
 
