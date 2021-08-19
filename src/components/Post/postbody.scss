@@ -1,7 +1,9 @@
 .posts_body {
   height: auto;
   width: auto;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 .posts_body_img {
-  width: 600px;
+  width: inherit;
 }
