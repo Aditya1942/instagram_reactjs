@@ -8,6 +8,7 @@ $screen-sm-min: 600px;
   position: fixed;
   bottom: 0;
 }
+
 .Body > div.MuiContainer-root {
   padding-left: 0px !important;
   padding-right: 0px !important;
@@ -15,4 +16,20 @@ $screen-sm-min: 600px;
     padding-left: 16px;
     padding-right: 16px;
   }
+}
+.posts {
+  @include sm {
+    margin-top: 10px;
+  }
+}
+.posts_div {
+  margin-bottom: 1rem;
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  margin-bottom: 24px;
+  margin-top: 0;
+}
+.postsheader {
+  border-bottom: 1px solid #dbdbdb;
 }
